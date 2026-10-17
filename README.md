@@ -2,8 +2,10 @@
 
 LGPL FFmpeg 8.1.3 binaries shipped with Tape Desktop and the Tape Docker image (no GPL, no non-free components).
 
-- macOS arm64 / x64: audio only, built with `build-ffmpeg-macos-lgpl.sh` from https://ffmpeg.org/releases/ffmpeg-8.1.3.tar.xz and LAME 3.100.
-- Linux x64 / arm64: audio only, fully static, built with `build-ffmpeg-linux-lgpl.sh` (debian:bookworm container) from the same sources.
-- Windows: mirror of BtbN/FFmpeg-Builds `autobuild-2026-10-16-13-04` (lgpl variant); source and build scripts at https://github.com/BtbN/FFmpeg-Builds. (The BtbN Linux archives also remain here for builds pinned to them.)
+- Windows x64 / ARM64: audio-only static builds from FFmpeg 8.1.3 and LAME 3.100, built with `build-ffmpeg-windows-lgpl.sh` and `build-ffmpeg-windows-arm64-lgpl.sh`. Archives are in [release ffmpeg-8.1.3-lgpl-2](https://github.com/gordo-labs/tape-ffmpeg/releases/tag/ffmpeg-8.1.3-lgpl-2).
+- macOS x64 / arm64: audio-only builds from FFmpeg 8.1.3 and LAME 3.100; see [release ffmpeg-8.1.3-lgpl-1](https://github.com/gordo-labs/tape-ffmpeg/releases/tag/ffmpeg-8.1.3-lgpl-1) and `build-ffmpeg-macos-lgpl.sh`.
+- Linux x64 / arm64: existing pinned LGPL archives remain in [release ffmpeg-8.1.3-lgpl-1](https://github.com/gordo-labs/tape-ffmpeg/releases/tag/ffmpeg-8.1.3-lgpl-1). Their build script is `build-ffmpeg-linux-lgpl.sh`.
 
-FFmpeg is licensed under the LGPL (https://ffmpeg.org/legal.html); each archive includes the license texts and a BUILDINFO.txt with the configure line.
+The Windows scripts pin the SHA-256 of both source archives and include the LGPL-only configure flags. Each binary archive includes the LGPL/LAME license texts and `BUILDINFO.txt`.
+
+FFmpeg is licensed under the LGPL: https://ffmpeg.org/legal.html.
